@@ -18,7 +18,7 @@ function defaultGrid() {
 
 function colorChange(e) {
     console.log("1");
-    e.target.style.backgroundColor = "white";
+    e.target.style.backgroundColor = "white"; //source 2 --sources.md
 }
 
 console.log(grid);
