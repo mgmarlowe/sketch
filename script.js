@@ -1,10 +1,9 @@
 window.onload = () => defaultGrid();
 
-let grid = document.getElementsByClassName("grid");
-grid.onmouseenter = function() {colorChange()};
+let grid = document.querySelectorAll(".grid");
+grid.onmouseover = function() {colorChange()};
 
 function defaultGrid() {
-    //notes in notebook pg 86
 
     let grid = 16;
     let num = grid * grid;
@@ -20,3 +19,5 @@ function defaultGrid() {
 function colorChange() {
     grid.style.backgroundColor = "white";
 }
+
+console.log(grid);
