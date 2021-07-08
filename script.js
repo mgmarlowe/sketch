@@ -1,7 +1,6 @@
 window.onload = () => defaultGrid();
 
-let grid = document.querySelectorAll(".grid");
-grid.onmouseover = function() {colorChange()};
+let grid = document.getElementsByClassName("grid");
 
 function defaultGrid() {
 
@@ -12,12 +11,14 @@ function defaultGrid() {
         let box = document.createElement("div");
         let container = document.getElementById("container");
         box.className = "grid"; //source 1 -- sources.md
+        box.addEventListener("mouseenter", colorChange);
         container.appendChild(box);
     }
 }
 
-function colorChange() {
-    grid.style.backgroundColor = "white";
+function colorChange(e) {
+    console.log("1");
+    e.target.style.backgroundColor = "white";
 }
 
 console.log(grid);
