@@ -2,7 +2,7 @@ The Odin Project - Foundations - Etch-A-Sketch project
 
 BEGAN: 29 June 2021
 
-COMPLETED: 
+COMPLETED: 13 July 2021
 
 -INTENDED OUTCOME:
     -The webpage will feature a responsive grid, where each grid box will change color on a mouseover, and stay that color.
