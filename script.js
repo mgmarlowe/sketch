@@ -27,7 +27,10 @@ function newGrid() { //get new grid size via input
     let input = prompt("Enter the number for a new grid between 2-80!");
     let newSize = parseInt(input);
 
-    if (newSize !== null) {
+    if (input === null){
+        defaultGrid();
+    }
+    if (input !== null) {
         if(newSize < 1 || newSize === NaN || newSize > 80) {
             alert("Enter a number between 2-80.");
             setSize();
@@ -37,6 +40,7 @@ function newGrid() { //get new grid size via input
             useGrid(newSize);
         }
     }
+    
 }
 
 function colorChange(e) {

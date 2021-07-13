@@ -1,9 +1,41 @@
+body {
+    background-color: grey;
+    display: grid;
+    grid-template-areas: 
+    ". . title . ."
+    ". . sketch . ."
+    ". . footer . .";
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.title {
+    grid-area: title;
+    text-align: center;
+    font-size: 3em;
+
+}
+
+footer {
+    grid-area: footer;
+    margin-top: 2em;
+    text-align: center;
+}
+
+button {
+    font-size: 1.5em;
+    padding: .7em;
+  
+    margin-bottom: 2em;
+    border-radius: 50%;
+}
+
 .container {
-    height: 800px;
-    width: 800px;
+    height: 700px;
+    width: 700px;
     background-color: white;
     display: inline-grid;
     margin: auto;
+    grid-area: sketch;
 }
 
 .grid {
