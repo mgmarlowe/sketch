@@ -1,6 +1,7 @@
 The Odin Project - Foundations - Etch-A-Sketch project
 
 BEGAN: 29 June 2021
+
 COMPLETED: 
 
 -INTENDED OUTCOME:
