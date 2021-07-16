@@ -4,6 +4,8 @@ BEGAN: 29 June 2021
 
 COMPLETED: 13 July 2021
 
+[Live Demo!](https://mgmarlowe.github.io/sketch/)
+
 -INTENDED OUTCOME:
     -The webpage will feature a responsive grid, where each grid box will change color on a mouseover, and stay that color.
 
