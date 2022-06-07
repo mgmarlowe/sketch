@@ -2,6 +2,11 @@ window.onload = () => defaultGrid();
 
 let grid = document.getElementsByClassName("grid");
 let container = document.getElementById("container");
+let basicBtn = document.getElementById("basic");
+let randomBtn = document.getElementById("random");
+let clearBtn = document.getElementById("clear");
+
+let mode = "basic";
 
 function defaultGrid() {
   //set up & populate the first grid
@@ -42,17 +47,42 @@ function newGrid() {
   } else if (!newSize) {
     defaultGrid();
   }
-  console.log(input);
-  console.log(typeof input);
 }
 
 function colorChange(e) {
-  e.target.style.backgroundColor = "white"; //source 2 --sources.md
+  if (mode === "random") {
+    let bgColor = randomColor();
+    e.target.style.backgroundColor = bgColor;
+  } else {
+    e.target.style.backgroundColor = "white"; //source 2 --sources.md
+  }
 }
 
-document.getElementById("clear").onclick = function clear() {
+basicBtn.onclick = () => {
+  if (mode !== "basic") {
+    mode = "basic";
+    className = "activeMode";
+    basicBtn.classList.add("activeMode");
+    randomBtn.classList.remove("activeMode");
+    clear();
+  }
+};
+
+randomBtn.onclick = () => {
+  if (mode !== "random") {
+    mode = "random";
+    className = "activeMode";
+    randomBtn.classList.add("activeMode");
+    basicBtn.classList.remove("activeMode");
+    clear();
+  }
+};
+
+function clear() {
   while (container.firstChild) {
     container.removeChild(container.firstChild);
   }
   newGrid();
-};
+}
+
+clearBtn.addEventListener("click", clear);
